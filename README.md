@@ -1,6 +1,6 @@
 # Data-Compliance-Hub-
 My Data Governance Analytics portfolio 
-### eDUCATION
+### Education
 Finance, BSc
 
 ### work Experience 
