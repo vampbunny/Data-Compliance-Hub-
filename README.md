@@ -1,6 +1,6 @@
 # Data-Compliance-Hub-
 
-# **Data Governance Analyst Portfolio**
+# **Data Governance Analyst**
 
 
 
