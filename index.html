@@ -1,138 +1,93 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Lami Sanni - Data Governance & Analytics Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lami the Analyst Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Lami the Analyst Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
+    <main>
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>Welcome to the dashboard showcasing data governance, management, and analytics insights. Explore projects, metrics, and analytical tools.</p>
+        </section>
 
-            <!-- Intro -->
-            <div id="intro">
-                <h1>Lami Sanni<br />Data Governance & Analytics</h1>
-                <p>Building structured, compliant, and insightful systems through effective data management and governance.
-                Explore projects in regulatory compliance, data mapping, quality analytics, and more.</p>
-                <ul class="actions">
-                    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
-                </ul>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Continuous Hardware Refresh: Laptops and handheld devices upgrade using Azure-based metrics.</li>
+                <li>Mobile Refresh: Transition to iPhone 14/15 and iPads for executive management.</li>
+                <li>Data Governance: Building structured metadata frameworks for compliance and integrity.</li>
+            </ul>
+        </section>
+
+        <section id="analytics" class="section">
+            <h2>Analytics Dashboard</h2>
+            <div class="chart-container">
+                <canvas id="dataChart"></canvas>
             </div>
+        </section>
 
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo">Lami Sanni</a>
-            </header>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form action="mailto:Lami.sanni@outlook.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li class="active"><a href="#main">Portfolio</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/ola-sanni-b1524633a" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="mailto:Lami.sanni@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
-            </nav>
+    <footer class="footer">
+        <p>&copy; 2024 Lami Sanni. All Rights Reserved.</p>
+    </footer>
 
-            <!-- Main -->
-            <div id="main">
-
-                <!-- Featured Section -->
-                <section id="featured" class="post">
-                    <header class="major">
-                        <h2>Data Governance in Action</h2>
-                        <p>Prioritizing compliance, integrity, and analytics for effective decision-making.</p>
-                    </header>
-                    <img src="images/data-governance.jpg" alt="Data Governance" class="image main" />
-                </section>
-
-                <!-- Data Governance Areas -->
-                <section id="data-areas" class="posts">
-                    <article>
-                        <header>
-                            <h2>Data Mapping</h2>
-                        </header>
-                        <p>Creating structured linkages between customer data and operational systems to ensure compliance and usability.
-                        <strong>Example:</strong> Order Data linked to Customer Data via Customer IDs.</p>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Data Integrity</h2>
-                        </header>
-                        <p>Ensuring data stability, accuracy, and reliability through structured governance frameworks.</p>
-                        <ul>
-                            <li>Is the data routinely updated?</li>
-                            <li>How is it validated to prevent corruption?</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Data Scraping & Structure</h2>
-                        </header>
-                        <p>Extracting unstructured data, such as vehicle mileage for warranty claims, and automating datasets for improved usability.</p>
-                        <p><strong>Example:</strong> Generating autofill records for past customers to maintain a cleaner dataset.</p>
-                    </article>
-                </section>
-
-                <!-- Analytics Dashboard -->
-                <section id="analytics">
-                    <header class="major">
-                        <h2>Interactive Analytics Dashboard</h2>
-                    </header>
-                    <p>Below is a sample visualization for laptop and mobile device refresh projects using metrics from Azure:</p>
-                    <div id="dashboard">
-                        <img src="images/dashboard-placeholder.jpg" alt="Dashboard Analytics" class="image fit" />
-                        <p>Replace with an actual interactive embedded dashboard.</p>
-                    </div>
-                </section>
-
-                <!-- Placeholder Projects -->
-                <section id="projects" class="posts">
-                    <header>
-                        <h2>Recent Projects</h2>
-                    </header>
-                    <article>
-                        <header>
-                            <h2>Laptop Refresh Initiative</h2>
-                        </header>
-                        <p>Successfully executed a hardware refresh for over 10,000 users, enabling them to select their preferred Dell Latitude model.</p>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Mobile Device Modernization</h2>
-                        </header>
-                        <p>Upgraded handheld devices to meet organizational requirements, providing iPhone 14/15 models to qualified users.</p>
-                    </article>
-                </section>
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section id="contact">
-                    <h2>Contact Me</h2>
-                    <p>Have questions or need collaboration? Reach out using the details below:</p>
-                    <ul class="icons">
-                        <li><a href="mailto:Lami.sanni@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/ola-sanni-b1524633a" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </section>
-                <p>&copy; 2024 Lami Sanni. Designed for professional portfolio use.</p>
-            </footer>
-
-        </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-
-    </body>
+    <script>
+        // Sample chart script using Chart.js
+        const ctx = document.getElementById('dataChart').getContext('2d');
+        const dataChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Hardware Refresh', 'Mobile Refresh', 'Data Governance'],
+                datasets: [{
+                    label: 'Projects Completed',
+                    data: [10000, 5000, 3000],
+                    backgroundColor: ['#4CAF50', '#2196F3', '#FF5722'],
+                    borderColor: ['#388E3C', '#1976D2', '#D32F2F'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
 </html>
