@@ -3,91 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lami the Analyst Dashboard</title>
+    <title>Data Governance Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header class="header">
-        <h1>Lami the Analyst Dashboard</h1>
+    <header>
+        <h1>Data Governance Analyst</h1>
+        <p>Welcome to my portfolio! Explore my work in data governance, compliance, and quality management.</p>
         <nav>
             <ul>
-                <li><a href="#overview">Overview</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#dashboard">Interactive Dashboard</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="overview" class="section">
-            <h2>Overview</h2>
-            <p>Welcome to the dashboard showcasing data governance, management, and analytics insights. Explore projects, metrics, and analytical tools.</p>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I specialize in designing frameworks that ensure data integrity, compliance, and security for organizations worldwide.</p>
+    </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Continuous Hardware Refresh: Laptops and handheld devices upgrade using Azure-based metrics.</li>
-                <li>Mobile Refresh: Transition to iPhone 14/15 and iPads for executive management.</li>
-                <li>Data Governance: Building structured metadata frameworks for compliance and integrity.</li>
-            </ul>
-        </section>
+    <section id="projects">
+        <h2>Portfolio Highlights</h2>
+        <ul>
+            <li><strong>Enterprise Data Governance Framework:</strong> Improved data accuracy by 30% for a Fortune 500 company.</li>
+            <li><strong>GDPR Compliance Initiative:</strong> Delivered a compliant framework for sensitive data handling.</li>
+            <li><strong>Metadata Management Implementation:</strong> Enhanced data discovery efficiency by 50%.</li>
+        </ul>
+    </section>
 
-        <section id="analytics" class="section">
-            <h2>Analytics Dashboard</h2>
-            <div class="chart-container">
-                <canvas id="dataChart"></canvas>
-            </div>
-        </section>
+    <section id="dashboard">
+        <h2>Interactive Dashboard</h2>
+        <iframe src="dashboard.html" width="100%" height="500" frameborder="0"></iframe>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form action="mailto:Lami.sanni@outlook.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaboration:</p>
+        <ul>
+            <li><strong>Email:</strong> your.email@example.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
+        </ul>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Lami Sanni. All Rights Reserved.</p>
+    <footer>
+        <p>© 2024 Your Name | Data Governance Portfolio</p>
     </footer>
-
-    <script>
-        // Sample chart script using Chart.js
-        const ctx = document.getElementById('dataChart').getContext('2d');
-        const dataChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Hardware Refresh', 'Mobile Refresh', 'Data Governance'],
-                datasets: [{
-                    label: 'Projects Completed',
-                    data: [10000, 5000, 3000],
-                    backgroundColor: ['#4CAF50', '#2196F3', '#FF5722'],
-                    borderColor: ['#388E3C', '#1976D2', '#D32F2F'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top'
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>
