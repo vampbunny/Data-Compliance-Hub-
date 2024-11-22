@@ -1,57 +1,120 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Dashboard</title>
+    <title>Lami the Analyst Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        canvas {
-            max-width: 80%;
-            max-height: 80%;
-        }
-    </style>
 </head>
 <body>
-    <canvas id="myChart"></canvas>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Lami the Analyst Dashboard</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>Overview</h2>
+                <p>Welcome to the dashboard. Here you'll find information on key projects, analytics insights, and tools for data governance and management.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Continuous Hardware Refresh</h3>
+                        <p>Upgrading laptops and devices using Azure-based insights.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Mobile Refresh</h3>
+                        <p>Transitioning to iPhone 14/15 and iPads for executives.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Data Governance</h3>
+                        <p>Building structured metadata frameworks for compliance and integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="section">
+            <div class="container">
+                <h2>Analytics Dashboard</h2>
+                <div class="chart-container">
+                    <canvas id="dataChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-light">
+            <div class="container">
+                <h2>Contact</h2>
+                <form action="mailto:Lami.sanni@outlook.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Lami Sanni. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chart Script -->
     <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar', // Chart type
+        const ctx = document.getElementById('dataChart').getContext('2d');
+        const dataChart = new Chart(ctx, {
+            type: 'bar',
             data: {
-                labels: ['January', 'February', 'March', 'April'], // X-axis labels
+                labels: ['Hardware Refresh', 'Mobile Refresh', 'Data Governance'],
                 datasets: [{
-                    label: 'Compliance Issues Resolved', // Chart label
-                    data: [12, 19, 3, 5], // Y-axis data
-                    backgroundColor: [ // Bar colors
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
-                    ],
-                    borderColor: [ // Border colors
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
+                    label: 'Projects Completed',
+                    data: [10000, 5000, 3000],
+                    backgroundColor: ['#4CAF50', '#2196F3', '#FF5722'],
+                    borderColor: ['#388E3C', '#1976D2', '#D32F2F'],
                     borderWidth: 1
                 }]
             },
             options: {
-                scales: {
-                    y: {
-                        beginAtZero: true // Y-axis starts at 0
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
                     }
                 }
             }
