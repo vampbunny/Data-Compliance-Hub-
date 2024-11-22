@@ -5,27 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="200"></canvas>
+    <canvas id="myChart"></canvas>
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'bar', // Chart type
             data: {
-                labels: ['January', 'February', 'March', 'April'],
+                labels: ['January', 'February', 'March', 'April'], // X-axis labels
                 datasets: [{
-                    label: 'Compliance Issues Resolved',
-                    data: [12, 19, 3, 5],
-                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
+                    label: 'Compliance Issues Resolved', // Chart label
+                    data: [12, 19, 3, 5], // Y-axis data
+                    backgroundColor: [ // Bar colors
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ],
+                    borderColor: [ // Border colors
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
                     borderWidth: 1
                 }]
             },
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true // Y-axis starts at 0
                     }
                 }
             }
